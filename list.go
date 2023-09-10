@@ -30,6 +30,12 @@ func (l *List[T]) Push(value T) {
 	*l = append(*l, value)
 }
 
+func (l *List[T]) Concat(value []T) {
+	for _, value := range value {
+		*l = append(*l, value)
+	}
+}
+
 func (l *List[T]) Pop() {
 	var newList []T
 	for index, value := range *l {
