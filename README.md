@@ -1,17 +1,17 @@
 # golist
 
-Golist is my package, which includes a List type that has the same methods as JavaScript arrays, and a few additional ones.
+Golist is my package, which includes a List type that has some good methods for arrays
 
 > List[T any] []T
 
 ** Methods:
-- Map
-- ForEach
-- Filter
-- Push
-- Concat
-- Pop
-- Splice
+- Where(fn func(v T, index int) bool) []T
+- ForEach(fn func(v T, index int))
+- Filter(fn func(v T, index int) bool) []T
+- Push(value T)
+- Concat(value []T
+- Pop()
+- Splice(elementIndex int, n int)
 
 #Example
 ```
