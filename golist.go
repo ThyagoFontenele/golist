@@ -1,4 +1,4 @@
-package list
+package golist
 
 type List[T any] []T
 
