@@ -14,6 +14,7 @@ Pop
 Splice
 
 #Example
+```
   import (
   	"fmt"
    	"github.com/ThyagoFontenele/golist"
@@ -36,3 +37,4 @@ Splice
   		fmt.Println(v.BMI()) // shows each person's BMI
   	})
   }
+```
