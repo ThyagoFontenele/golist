@@ -14,6 +14,11 @@ Pop
 Splice
 
 #Example
+  import (
+  	"fmt"
+   	"github.com/ThyagoFontenele/golist"
+  )
+  
   type Person struct {
   	height, weight float32
   }
