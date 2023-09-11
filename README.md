@@ -5,13 +5,13 @@ Golist is my package, which includes a List type that has the same methods as Ja
 List[T any] []T
 
 Methods:
-Map
-ForEach
-Filter
-Push
-Concat
-Pop
-Splice
++Map
++ForEach
++Filter
++Push
++Concat
++Pop
++Splice
 
 #Example
 ```
