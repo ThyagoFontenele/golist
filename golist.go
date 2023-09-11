@@ -2,10 +2,12 @@ package golist
 
 type List[T any] []T
 
-func (l List[T]) Map(fn func(v T, index int) T) []T {
+func (l List[T]) Where(fn func(v T, index int) bool) []T {
 	var newValue []T
 	for index, value := range l {
-		newValue = append(newValue, fn(value, index))
+		if fn(value, index) {
+			newValue = append(newValue, value)
+		}
 	}
 	return newValue
 }
