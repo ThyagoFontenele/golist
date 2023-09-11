@@ -57,3 +57,18 @@ func (l List[T]) First(fn func(v T, index int) bool) T {
 	}
 	return firstValue
 }
+
+func (l *List[T]) Splice(elementIndex int, n int) []T {
+	var newList []T
+	var elements []T
+	for index, value := range *l {
+		if index >= elementIndex && index < elementIndex+n {
+			elements = append(elements, value)
+			continue
+		}
+		newList = append(newList, value)
+	}
+	*l = newList
+
+	return elements
+}
