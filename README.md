@@ -2,9 +2,9 @@
 
 Golist is my package, which includes a List type that has the same methods as JavaScript arrays, and a few additional ones.
 
-List[T any] []T
+> List[T any] []T
 
-**Methods:
+** Methods:
 - Map
 - ForEach
 - Filter
