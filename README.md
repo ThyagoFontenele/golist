@@ -9,7 +9,7 @@ Golist is my package, which includes a List type that has some good methods for 
 - ForEach(fn func(v T, index int))
 - Filter(fn func(v T, index int) bool) []T
 - Push(value T)
-- Concat(value []T
+- Concat(value []T)
 - Pop()
 - Splice(elementIndex int, n int)
 
@@ -29,10 +29,17 @@ Golist is my package, which includes a List type that has some good methods for 
   }
   
   func main() {
-    people := golist.List[Person]{{1.85, 78}, {1.7, 56}, {1.84, 76}, {1.82, 72}}
-    fmt.Println(people.Splice(1, 1)) // [{1.85, 78}]
-    fmt.Println(people)             // [{1.7, 56}, {1.84, 76}, {1.82, 72}]
+    people := := golist.List[Person] {
+  		{"Thyago", 1.85, 78},
+  		{"Julia", 1.7, 56},
+  		{"Fernando", 1.84, 76},
+  		{"Maria", 1.82, 72},
+	  }           
 
+    people.Splice(0, 1) // Removing the firts person
+    people.Pop()        // Removing the last person
+    fmt.Println(people) // {{"Julia", 1.7, 56}, {"Fernando", 1.84, 76}}
+    
     pessoas.ForEach(func(v Person, index int) {
       fmt.Println(v.BMI())  // shows each person's BMI
     })
