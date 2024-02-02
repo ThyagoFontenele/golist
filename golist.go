@@ -39,25 +39,19 @@ func (l *List[T]) Concat(value []T) {
 }
 
 func (l *List[T]) Pop() {
-	var newList []T
-	for index, value := range *l {
-		if index+1 == len(*l) {
-			break
-		}
-		newList = append(newList, value)
-	}
-	*l = newList
+	*l = (*l)[0 : len(*l)-1]
 }
 
 func (l List[T]) First(fn func(v T, index int) bool) T {
-	var firstValue T
+	var defaultValue T
+
 	for index, value := range l {
 		if fn(value, index) {
-			firstValue = value
-			break
+			return value
 		}
 	}
-	return firstValue
+
+	return defaultValue
 }
 
 func (l *List[T]) Splice(elementIndex int, n int) []T {
